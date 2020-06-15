@@ -16,7 +16,7 @@ gcc -c main.s -o main.o
 gcc main.o -o hello
 ```
 
-如何编译 intel 格式的汇编代码
+如何编译 intel 格式的汇编代码(默认是 AT&T 的格式)
 
 ```bash
 gcc -S -masm=intel main.c -o intel-main.s
