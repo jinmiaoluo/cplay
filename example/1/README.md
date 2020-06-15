@@ -1,17 +1,24 @@
 如何将 C 编译成汇编
 
 ```bash
-gcc -S main.c -o main.S
+gcc -S main.c -o main.s
 ```
 
 如何将汇编编译为 object
 
 ```bash
-gcc -c main.S -o main.o
+gcc -c main.s -o main.o
 ```
 
 如何链接 object 文件内的 symbols
 
 ```bash
 gcc main.o -o hello
+```
+
+如何编译 intel 格式的汇编代码
+
+```bash
+gcc -S -masm=intel main.c -o intel-main.s
+gcc -S -masm=intel demo2.c -o demo2.s
 ```
