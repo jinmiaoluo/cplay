@@ -23,8 +23,8 @@ gcc -S -masm=intel main.c -o intel-main.s
 gcc -S -masm=intel demo2.c -o demo2.s
 ```
 
+注意, 不同的格式, 指令的参数位置是不一样的. 这会导致理解错误, 比如 add 指令:
 ```
-# 注意, 不同的格式, 指令的参数位置是不一样的. 这会导致理解错误
 add src, dest             # GAS(GNU Assembler) Syntax
 add dest, src             # Intel Syntax
 ```
